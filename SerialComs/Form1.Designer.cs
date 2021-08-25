@@ -29,6 +29,7 @@ namespace SerialComs
         /// </summary>
         private void InitializeComponent()
         {
+            this.serialPort1 = new System.IO.Ports.SerialPort();
             this.components = new System.ComponentModel.Container();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -53,7 +54,8 @@ namespace SerialComs
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboSample = new System.Windows.Forms.ComboBox();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
-            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.textBoxFileName = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -253,7 +255,7 @@ namespace SerialComs
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(66, 70);
+            this.label1.Location = new System.Drawing.Point(67, 66);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(102, 15);
@@ -272,6 +274,8 @@ namespace SerialComs
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.textBoxFileName);
             this.groupBox2.Controls.Add(this.richTextBox1);
             this.groupBox2.Controls.Add(this.comboSample);
             this.groupBox2.Controls.Add(this.label1);
@@ -286,7 +290,7 @@ namespace SerialComs
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(10, 125);
+            this.richTextBox1.Location = new System.Drawing.Point(10, 135);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.ReadOnly = true;
             this.richTextBox1.Size = new System.Drawing.Size(427, 261);
@@ -307,7 +311,7 @@ namespace SerialComs
             "8",
             "9",
             "10"});
-            this.comboSample.Location = new System.Drawing.Point(176, 66);
+            this.comboSample.Location = new System.Drawing.Point(177, 63);
             this.comboSample.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.comboSample.Name = "comboSample";
             this.comboSample.Size = new System.Drawing.Size(140, 23);
@@ -318,6 +322,24 @@ namespace SerialComs
             // timer2
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
+            // textBoxFileName
+            // 
+            this.textBoxFileName.Location = new System.Drawing.Point(176, 96);
+            this.textBoxFileName.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.textBoxFileName.Name = "textBoxFileName";
+            this.textBoxFileName.Size = new System.Drawing.Size(251, 23);
+            this.textBoxFileName.TabIndex = 12;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(108, 99);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 15);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "File Name";
             // 
             // Form1
             // 
@@ -344,6 +366,7 @@ namespace SerialComs
         }
 
         #endregion
+        //private System.IO.Ports.SerialPort serialPort1;
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label_parity;
@@ -368,6 +391,8 @@ namespace SerialComs
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ComboBox comboSample;
         private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBoxFileName;
     }
 }
 
